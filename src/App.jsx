@@ -1,11 +1,11 @@
+import MainNavigation from "./components/MainNavigation"
 
 
 
 const App = () => {
   return (
-    <h1 class="text-3xl font-bold">
-      Hello world!
-    </h1>
+    
+    <MainNavigation />
   )
 }
 
