@@ -1,0 +1,109 @@
+@reference "../../index.css";
+
+.hero{
+    @apply relative
+    min-h-screen
+    w-full
+    overflow-hidden;
+}
+
+
+.video{
+    @apply absolute
+    inset-0
+    w-full
+    h-full
+    object-cover
+    z-0;
+}
+
+.overlay{
+    @apply absolute
+    inset-0
+    bg-black/40
+    z-10;
+}
+
+
+.hero h1{
+    @apply relative
+    z-20
+    pt-32
+    text-center
+    leading-none
+    font-modern-negra
+    text-8xl
+    md:text-[20vw];
+}
+
+
+.body{
+    @apply container
+    mx-auto
+    min-h-screen
+    px-5
+    absolute
+    inset-0
+    flex
+    items-end
+    pb-20;
+}
+
+.content{
+    @apply flex
+    lg:flex-row
+    flex-col
+    justify-between
+    items-center
+    lg:items-end
+    gap-10
+    w-full;
+}
+
+
+.content p:nth-of-type(2){
+    @apply font-modern-negra
+    text-yellow
+    text-6xl
+    max-w-xl;
+}
+
+.viewMenu{
+    @apply space-y-5
+    text-lg
+    lg:max-w-2xs
+    md:max-w-xs
+    w-full;
+}
+
+.viewMenu p{
+    @apply text-left;
+}
+
+.viewMenu a{
+    @apply font-semibold
+    opacity-80
+    hover:text-yellow;
+}
+
+.videoControl{
+    @apply absolute
+    bottom-6
+    left-6
+    z-30
+    w-12
+    h-12
+    rounded-full
+    bg-white/10
+    backdrop-blur-md
+    flex
+    items-center
+    justify-center
+    transition
+    hover:bg-white/20;
+}
+
+.videoControl img{
+    @apply w-5 h-5;
+}
+

@@ -1,11 +1,17 @@
 import MainNavigation from "./components/MainNavigation"
 
+import HomePage from "./pages/HomePage"
+
 
 
 const App = () => {
   return (
-    
-    <MainNavigation />
+    <>
+      <MainNavigation />
+      <HomePage />
+    </>
+
+
   )
 }
 
