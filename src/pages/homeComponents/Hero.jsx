@@ -12,7 +12,7 @@ const Hero = () => {
 
     const videoRef = useRef();
 
-    
+
 
     const toggleVideo = () => {
 
@@ -50,6 +50,14 @@ const Hero = () => {
             delay: 1,
         })
 
+        gsap.from('.cta-buttons', {
+            opacity: 0,
+            y: 40,
+            duration: 1.8,
+            ease: 'expo.out',
+            delay: 1
+        });
+
 
     }, [])
 
@@ -70,36 +78,31 @@ const Hero = () => {
 
                 <div className={styles.overlay}></div>
 
-                <h1 className="title">
-                    Pier
-                </h1>
+                <div className={styles.content}>
 
-                <div className={styles.body}>
+                    <h1 className="title">
+                        Pier
+                    </h1>
 
-                    <div className={styles.content}>
+                    <p className={`subtitle ${styles.subtitle}`}>
+                        Pizza • Pasta • Love
+                    </p>
 
-                        <div className="space-y-5 hidden md:block">
-                            <p>Pasta.Pizza.Wine</p>
+                    <div className={`cta-buttons ${styles.actions}`}>
 
-                            <p className="subtitle">
-                                Try the spirit
-                                <br />
-                                of Italy
-                            </p>
-                        </div>
+                        <a
+                            href="#menu"
+                            className={styles.primaryBtn}
+                        >
+                            Check Menu
+                        </a>
 
-                        <div className={styles.viewMenu}>
-
-                            <p className="subtitle">
-                                Every cocktail in our menu is a blend
-                                of ages, history and significant work.
-                            </p>
-
-                            <a href="#menu">
-                                View Menu
-                            </a>
-
-                        </div>
+                        <a
+                            href="#reserve"
+                            className={styles.secondaryBtn}
+                        >
+                            Reserve Table
+                        </a>
 
                     </div>
 
@@ -109,16 +112,14 @@ const Hero = () => {
                     className={styles.videoControl}
                     onClick={toggleVideo}
                 >
-
                     <img
                         src={
                             isPlaying
                                 ? "/images/pause.svg"
                                 : "/images/play.svg"
                         }
-                        alt="video control"
+                        alt=""
                     />
-
                 </button>
 
             </section>

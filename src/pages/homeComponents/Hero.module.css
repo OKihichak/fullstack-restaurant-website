@@ -3,10 +3,13 @@
 .hero{
     @apply relative
     min-h-screen
-    w-full
-    overflow-hidden;
+    overflow-hidden
+    flex
+    items-center
+    justify-center;
 }
 
+/* VIDEO */
 
 .video{
     @apply absolute
@@ -20,77 +23,82 @@
 .overlay{
     @apply absolute
     inset-0
-    bg-black/40
+    bg-black/45
     z-10;
 }
 
-
-.hero h1{
-    @apply relative
-    z-20
-    pt-32
-    text-center
-    leading-none
-    font-modern-negra
-    text-8xl
-    md:text-[20vw];
-}
-
-
-.body{
-    @apply container
-    mx-auto
-    min-h-screen
-    px-5
-    absolute
-    inset-0
-    flex
-    items-end
-    pb-20;
-}
+/* HERO CONTENT */
 
 .content{
-    @apply flex
-    lg:flex-row
+    @apply relative
+    z-20
+    flex
     flex-col
-    justify-between
     items-center
-    lg:items-end
-    gap-10
-    w-full;
+    text-center
+    gap-6
+    px-5;
 }
 
+/* TITLE */
 
-.content p:nth-of-type(2){
+.content h1{
     @apply font-modern-negra
-    text-yellow
-    text-6xl
-    max-w-xl;
+    text-7xl
+    md:text-[12vw]
+    leading-none;
 }
 
-.viewMenu{
-    @apply space-y-5
-    text-lg
-    lg:max-w-2xs
-    md:max-w-xs
-    w-full;
+/* SUBTITLE */
+
+.subtitle{
+    @apply uppercase
+    tracking-[0.35em]
+    text-sm
+    md:text-lg
+    opacity-90;
 }
 
-.viewMenu p{
-    @apply text-left;
+/* CTA WRAPPER */
+
+.actions{
+    @apply flex
+    md:flex-row
+    flex-col
+    gap-4
+    mt-4;
 }
 
-.viewMenu a{
-    @apply font-semibold
-    opacity-80
-    hover:text-yellow;
+/* BUTTONS */
+
+.primaryBtn{
+    @apply px-8
+    py-4
+    rounded-full
+    bg-yellow
+    text-black
+    font-semibold
+    transition
+    hover:opacity-90;
 }
+
+.secondaryBtn{
+    @apply px-8
+    py-4
+    rounded-full
+    border
+    border-white
+    font-semibold
+    transition
+    hover:bg-white
+    hover:text-black;
+}
+
+/* PLAY BUTTON */
 
 .videoControl{
-    @apply absolute
-    bottom-6
-    left-6
-    z-30
+    @apply fixed
+    z-50
     w-12
     h-12
     rounded-full
@@ -101,9 +109,11 @@
     justify-center
     transition
     hover:bg-white/20;
+
+    left: 1.5rem;
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
 }
 
 .videoControl img{
     @apply w-5 h-5;
 }
-
