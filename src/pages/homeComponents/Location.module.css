@@ -1,0 +1,78 @@
+@reference "../../index.css";
+
+.location{
+    @apply py-28
+    container
+    mx-auto
+    px-5;
+}
+
+/* HEADER */
+
+.header{
+    @apply text-center
+    mb-14;
+}
+
+
+
+.header h2{
+    @apply text-5xl
+    md:text-6xl
+    font-modern-negra
+    max-w-4xl
+    mx-auto;
+}
+
+/* MAP WRAPPER */
+
+.mapWrapper{
+    @apply rounded-[32px]
+    overflow-hidden
+    border
+    border-white/10
+    shadow-2xl;
+}
+
+/* LEAFLET MAP */
+
+.map{
+    @apply h-[500px]
+    w-full;
+}
+
+/* CUSTOM LEAFLET FIXES */
+
+:global(.leaflet-container){
+    background:black;
+    font-family:inherit;
+}
+
+:global(.leaflet-control-zoom){
+
+    @apply rounded-xl
+    overflow-hidden
+    shadow-lg;
+
+}
+
+:global(.leaflet-control-zoom a){
+
+    @apply bg-black/80
+    text-white
+    border-white/10;
+
+}
+
+:global(.leaflet-popup-content-wrapper){
+
+    @apply bg-black
+    text-white
+    rounded-xl;
+
+}
+
+:global(.leaflet-popup-tip){
+
+    background:black;
+}
