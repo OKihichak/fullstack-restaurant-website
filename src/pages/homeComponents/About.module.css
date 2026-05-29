@@ -1,0 +1,128 @@
+@reference "../../index.css";
+
+.section{
+    @apply relative
+    py-32
+    overflow-hidden
+    bg-black;
+}
+
+
+.letter{
+    @apply absolute
+    inset-0
+    flex
+    justify-center
+    items-center
+    text-[22rem]
+    md:text-[35rem]
+    font-modern-negra
+    text-white/5
+    z-0;
+}
+
+
+.content{
+    @apply relative
+    z-20
+    container
+    mx-auto
+    px-5
+    flex
+    lg:flex-row
+    flex-col
+    items-center
+    justify-between;
+}
+
+
+.left{
+    @apply flex-1
+    flex
+    flex-col
+    justify-end
+    items-end
+    text-right;
+}
+
+
+.center{
+    @apply relative
+    mx-0
+    lg:mx-16
+    my-10
+    lg:my-0
+    flex
+    justify-center
+    items-center;
+}
+
+.center img{
+    @apply relative
+    z-20
+    h-[450px]
+    md:h-[700px]
+    lg:h-[900px]
+    w-auto
+    object-contain;
+}
+
+
+.right{
+    @apply flex-1
+    flex
+    flex-col
+    justify-start
+    items-start
+    text-left;
+}
+
+
+.left h2,
+.right h2{
+    @apply font-modern-negra
+    text-yellow
+    text-4xl
+    md:text-6xl;
+}
+
+
+.left p,
+.right p{
+    @apply my-8
+    text-gray-400
+    leading-relaxed
+    max-w-md;
+}
+
+
+.left button,
+.right button{
+    @apply border
+    border-yellow
+    px-8
+    py-3
+    text-yellow
+    transition
+    hover:bg-yellow
+    hover:text-black;
+}
+
+
+@media (max-width:1024px){
+
+    .content{
+        @apply flex-col;
+    }
+
+    .left,
+    .right{
+        @apply items-center
+        text-center;
+    }
+
+    .center{
+        @apply my-16;
+    }
+
+}
