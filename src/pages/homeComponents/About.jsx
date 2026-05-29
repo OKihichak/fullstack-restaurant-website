@@ -51,7 +51,7 @@ const About = () => {
 
         gsap.to(knifeRef.current, {
 
-            
+            y: 150,
 
             ease: "none",
 
