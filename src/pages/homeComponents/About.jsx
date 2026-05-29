@@ -69,7 +69,7 @@ const About = () => {
 
     return (
 
-        <section ref={sectionRef} className={styles.section}>
+        <section id="about" ref={sectionRef} className={styles.section}>
 
             <div className={styles.content}>
 

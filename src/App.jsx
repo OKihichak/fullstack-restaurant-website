@@ -1,3 +1,4 @@
+import MainFooter from "./components/MainFooter"
 import MainNavigation from "./components/MainNavigation"
 
 import HomePage from "./pages/HomePage"
@@ -9,6 +10,7 @@ const App = () => {
     <>
       <MainNavigation />
       <HomePage />
+      <MainFooter />
     </>
 
 

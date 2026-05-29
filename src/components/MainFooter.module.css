@@ -1,0 +1,100 @@
+@reference "../index.css";
+
+.footer{
+
+    @apply border-t
+    border-white/10
+    mt-32
+    py-20
+    px-5;
+
+}
+
+.container{
+
+    @apply container
+    mx-auto
+    grid
+    grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-4
+    gap-16;
+
+}
+
+/* BRAND */
+
+.brand h2{
+
+    @apply font-modern-negra
+    text-6xl
+    text-yellow
+    mb-6;
+
+}
+
+.brand p{
+
+    @apply text-gray-400
+    leading-relaxed
+    max-w-xs;
+
+}
+
+/* SECTIONS */
+
+.links,
+.contact,
+.hours{
+
+    @apply flex
+    flex-col
+    gap-4;
+
+}
+
+.links h3,
+.contact h3,
+.hours h3{
+
+    @apply text-xl
+    font-semibold
+    text-white
+    mb-3;
+
+}
+
+.links a{
+
+    @apply text-gray-400
+    transition
+    hover:text-yellow;
+
+}
+
+.contact p,
+.hours p{
+
+    @apply text-gray-400
+    leading-relaxed;
+
+}
+
+/* BOTTOM */
+
+.bottom{
+
+    @apply border-t
+    border-white/10
+    mt-16
+    pt-8
+    text-center;
+
+}
+
+.bottom p{
+
+    @apply text-gray-500
+    text-sm;
+
+}
