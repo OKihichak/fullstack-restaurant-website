@@ -1,0 +1,110 @@
+@reference "../../index.css";
+
+.hero{
+
+    @apply relative
+    z-10
+    min-h-dvh
+    w-full
+    border
+    border-transparent;
+
+}
+
+.title{
+
+    @apply md:mt-32
+    mt-40
+    text-8xl
+    md:text-[20vw]
+    leading-none
+    text-center
+    font-modern-negra;
+
+}
+
+.body{
+
+    @apply container
+    mx-auto
+    absolute
+    left-1/2
+    -translate-x-1/2
+    lg:bottom-20
+    md:top-[30vh]
+    top-auto
+    flex
+    justify-between
+    items-end
+    px-5;
+
+}
+
+.content{
+
+    @apply flex
+    lg:flex-row
+    flex-col
+    w-full
+    gap-10
+    justify-between
+    items-center
+    lg:items-end
+    mx-auto;
+
+}
+
+.subtitle{
+
+    @apply font-modern-negra
+    text-6xl
+    text-yellow
+    max-w-xl;
+
+}
+
+.viewMenu{
+
+    @apply space-y-5
+    text-lg
+    lg:max-w-2xs
+    md:max-w-xs
+    w-full;
+
+}
+
+.viewMenu p{
+
+    @apply text-left;
+
+}
+
+.viewMenu a{
+
+    @apply font-semibold
+    opacity-80
+    transition
+    hover:text-yellow;
+
+}
+
+.videoWrapper{
+
+    @apply absolute
+    inset-0;
+
+}
+
+.videoWrapper video{
+
+    @apply absolute
+    bottom-0
+    left-0
+    w-full
+    md:h-[80%]
+    h-1/2
+    md:object-contain
+    object-bottom
+    object-cover;
+
+}

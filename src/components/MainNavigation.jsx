@@ -2,7 +2,7 @@ import { navLinks } from "../../constants"
 import styles from "./MainNavigation.module.css"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-
+import { NavLink } from "react-router-dom";
 
 
 
@@ -16,7 +16,7 @@ const MainNavigation = () => {
             }
         });
 
-        navTween.fromTo('nav', {backgroundColor: 'transparent'},{
+        navTween.fromTo('nav', { backgroundColor: 'transparent' }, {
             backgroundColor: '00000050',
             backgroundFilter: 'blur(10px)',
             duration: 1,
@@ -24,25 +24,58 @@ const MainNavigation = () => {
         });
     })
 
-  return (
-    <nav className={styles.nav}>
-        <div>
-            <a href="#home" className="flex items-center gap-2">
-                <img src="/images/logo.png" alt="logo"/>
-                <p>Pier</p>
-            </a>
+    return (
 
-            <ul>
-                {navLinks.map((link) => (
-                    <li key={link.id}>
-                        <a href={`#${link.id}`}>{link.title}</a>
-                    </li>
-                ))}
-            </ul>
+        <nav className={styles.nav}>
 
-        </div>
-    </nav>
-  )
+            <div>
+
+                <NavLink
+                    to="/"
+                    className="flex items-center gap-2"
+                >
+
+                    <img
+                        src="/images/logo.png"
+                        alt="logo"
+                    />
+
+                    <p>Pier</p>
+
+                </NavLink>
+
+                <ul>
+
+                    {navLinks.map((link) => (
+
+                        <li key={link.id}>
+
+                            <NavLink
+                                to={link.path}
+                                className={({ isActive }) =>
+
+                                    isActive
+                                        ? styles.active
+                                        : ""
+
+                                }
+                            >
+
+                                {link.title}
+
+                            </NavLink>
+
+                        </li>
+
+                    ))}
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    )
 }
 
 export default MainNavigation

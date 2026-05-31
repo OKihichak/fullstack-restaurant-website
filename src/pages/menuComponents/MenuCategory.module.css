@@ -1,0 +1,56 @@
+@reference "../../index.css";
+
+.category{
+
+    @apply space-y-8
+    w-full
+    md:w-fit;
+
+}
+
+.category h2{
+
+    @apply text-xl
+    font-medium;
+
+}
+
+.category ul{
+
+    @apply space-y-8;
+
+}
+
+.category li{
+
+    @apply flex
+    justify-between
+    items-start
+    gap-6;
+
+}
+
+.info h3{
+
+    @apply font-modern-negra
+    2xl:text-3xl
+    text-xl
+    text-yellow;
+
+}
+
+.info p{
+
+    @apply text-sm
+    opacity-80
+    max-w-md;
+
+}
+
+.category span{
+
+    @apply text-xl
+    font-medium
+    whitespace-nowrap;
+
+}

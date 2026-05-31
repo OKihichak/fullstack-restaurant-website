@@ -1,11 +1,14 @@
-import './index.css'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom/client";
+import './index.css'
 
+ReactDOM.createRoot(document.getElementById('root')).render(
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+    <BrowserRouter>
+
+        <App />
+
+    </BrowserRouter>
+
+)

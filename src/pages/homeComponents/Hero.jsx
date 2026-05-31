@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"
 import { useRef, useState } from "react"
-
+import { NavLink } from "react-router-dom"
 
 
 const Hero = () => {
@@ -90,12 +90,12 @@ const Hero = () => {
 
                     <div className={`cta-buttons ${styles.actions}`}>
 
-                        <a
-                            href="#menu"
+                        <NavLink
+                            to={'/menu'}
                             className={styles.primaryBtn}
                         >
                             Check Menu
-                        </a>
+                        </NavLink>
 
                         <a
                             href="#reserve"
