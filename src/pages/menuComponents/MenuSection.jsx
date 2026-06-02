@@ -1,39 +1,48 @@
-import styles from "./MenuSection.module.css";
-import MenuCategory from "./MenuCategory";
 import { menuItems } from "../../../constants";
+import MenuPair from "./MenuPair";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-const MenuSection = () => {
+
+
+const CocktailsSection = () => {
+
+    useGSAP(() => {
+        const parallaxTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#cocktails',
+                start: 'top 30%',
+                end: 'bottom 80%',
+                scrub: true,
+            }
+        })
+
+        parallaxTimeline.from('#c-left-leaf', {
+            x: -100,
+            y: 100
+        })
+        .from('#c-right-leaf', {
+            x:100,
+            y: 100
+        })
+    },[])
 
     return (
 
-        <section
-            id="menu-list"
-            className={styles.section}
-        >
+        <section id="cocktails">
 
-            <div className={styles.list}>
+            <MenuPair
+                leftTitle="Signature Cocktails"
+                leftItems={menuItems.cocktails}
+                rightTitle="Refreshing Mocktails"
+                rightItems={menuItems.mocktails}
+            />
 
-                <MenuCategory
-                    title="Pizza"
-                    items={menuItems.pizza}
-                />
-
-                <MenuCategory
-                    title="Pasta"
-                    items={menuItems.pasta}
-                />
-
-                <MenuCategory
-                    title="Cocktails"
-                    items={menuItems.cocktails}
-                />
-
-            </div>
 
         </section>
 
-    )
+    );
 
-}
+};
 
-export default MenuSection;
+export default CocktailsSection;

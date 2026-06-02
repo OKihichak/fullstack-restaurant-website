@@ -1,31 +1,29 @@
 import L from "leaflet";
 
 const navLinks = [
+  {
+    id: 1,
+    title: "Menu",
+    path: "/menu",
+  },
 
-    {
-        id:1,
-        title:"Menu",
-        path:"/menu"
-    },
+  {
+    id: 2,
+    title: "Reservation",
+    path: "/#reservation",
+  },
 
-    {
-        id:2,
-        title:"Reservation",
-        path:"/#reservation"
-    },
+  {
+    id: 3,
+    title: "About Us",
+    path: "/#about",
+  },
 
-    {
-        id:3,
-        title:"About Us",
-        path:"/#about"
-    },
-
-    {
-        id:4,
-        title:"Contact",
-        path:"/#contact"
-    }
-
+  {
+    id: 4,
+    title: "Contact",
+    path: "/#contact",
+  },
 ];
 
 const menuItems = {
@@ -200,6 +198,63 @@ const menuItems = {
       name: "Smoked Manhattan",
       price: "18€",
       description: "Rye whiskey, vermouth, bitters, smoked aroma.",
+    },
+  ],
+  mocktails: [
+    {
+      id: 25,
+      name: "Virgin Mojito",
+      price: "9€",
+      description: "Fresh mint, lime juice, soda water, cane sugar.",
+    },
+
+    {
+      id: 26,
+      name: "Berry Fizz",
+      price: "10€",
+      description: "Mixed berries, lemon juice, sparkling water.",
+    },
+
+    {
+      id: 27,
+      name: "Tropical Breeze",
+      price: "11€",
+      description: "Pineapple, mango, passionfruit and citrus blend.",
+    },
+
+    {
+      id: 28,
+      name: "Italian Sunset",
+      price: "10€",
+      description: "Blood orange, peach nectar, tonic water.",
+    },
+
+    {
+      id: 29,
+      name: "Cucumber Cooler",
+      price: "9€",
+      description: "Cucumber, lime, mint and sparkling water.",
+    },
+
+    {
+      id: 30,
+      name: "Passion Spritz",
+      price: "11€",
+      description: "Passionfruit purée, soda water and fresh lime.",
+    },
+
+    {
+      id: 31,
+      name: "Rosso Berry",
+      price: "10€",
+      description: "Raspberry, cranberry and lemon with ice.",
+    },
+
+    {
+      id: 32,
+      name: "Lemon Basil Refresher",
+      price: "9€",
+      description: "Fresh basil, lemon juice, honey and soda.",
     },
   ],
 };
