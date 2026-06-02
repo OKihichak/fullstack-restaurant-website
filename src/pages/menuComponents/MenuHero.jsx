@@ -4,6 +4,9 @@ import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 
 const MenuHero = () => {
@@ -61,9 +64,9 @@ const MenuHero = () => {
 
     return (
         <>
-            <section className={`${styles.hero} noisy`}>
+            <section className={styles.hero}>
 
-                <h1 className={styles.title}>
+                <h1 className={`title ${styles.title}`}>
                     MENU
                 </h1>
 
@@ -77,7 +80,7 @@ const MenuHero = () => {
                                 Crispy. Fresh. Italian.
                             </p>
 
-                            <p className={styles.subtitle}>
+                            <p className={`subtitle ${styles.subtitle}`}>
                                 Taste the soul
                                 <br />
                                 of Naples
@@ -85,9 +88,9 @@ const MenuHero = () => {
 
                         </div>
 
-                        <div className={styles.viewCocktails}>
+                        <div className={`view-cocktails ${styles.viewCocktails}`}>
 
-                            <p>
+                            <p className="subtitle">
                                 Stone-baked pizzas crafted
                                 with authentic ingredients,
                                 rich flavour and timeless
@@ -106,7 +109,7 @@ const MenuHero = () => {
 
             </section>
 
-            <div className={styles.videoWrapper}>
+            <div className={`video ${styles.videoWrapper}`}>
 
                 <video
                     ref={videoRef}
