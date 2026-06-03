@@ -29,24 +29,10 @@ const navLinks = [
 const menuItems = {
   pizza: [
     {
-      id: 1,
-      name: "Margherita",
-      price: "12€",
-      description: "San Marzano tomatoes, mozzarella di bufala, fresh basil.",
-    },
-
-    {
       id: 2,
       name: "Diavola",
       price: "15€",
       description: "Spicy salami, mozzarella, tomato sauce, chili oil.",
-    },
-
-    {
-      id: 3,
-      name: "Quattro Formaggi",
-      price: "16€",
-      description: "Mozzarella, gorgonzola, parmesan, pecorino.",
     },
 
     {
@@ -140,6 +126,84 @@ const menuItems = {
       name: "Arrabbiata",
       price: "14€",
       description: "Spicy tomato sauce, garlic, parsley, chili flakes.",
+    },
+  ],
+
+  veganPasta: [
+    {
+      id: 27,
+      name: "Penne Arrabbiata",
+      price: "14€",
+      description: "Spicy tomato sauce, garlic and parsley.",
+    },
+    {
+      id: 28,
+      name: "Spaghetti al Pomodoro",
+      price: "13€",
+      description: "San Marzano tomato sauce and fresh basil.",
+    },
+    {
+      id: 29,
+      name: "Pesto Vegan",
+      price: "15€",
+      description: "Basil pesto, pine nuts and olive oil.",
+    },
+    {
+      id: 30,
+      name: "Funghi e Spinaci",
+      price: "16€",
+      description: "Mushrooms, spinach and garlic olive oil.",
+    },
+    {
+      id: 31,
+      name: "Mediterranean Linguine",
+      price: "17€",
+      description: "Olives, capers, cherry tomatoes and herbs.",
+    },
+    {
+      id: 32,
+      name: "Truffle Penne",
+      price: "18€",
+      description: "Truffle oil, mushrooms and vegan cream.",
+    },
+  ],
+
+  veganPizza: [
+    {
+      id: 17,
+      name: "Verdura Verde",
+      price: "15€",
+      description: "Zucchini, grilled eggplant, cherry tomatoes and basil.",
+    },
+    {
+      id: 18,
+      name: "Vegan Margherita",
+      price: "14€",
+      description: "Tomato sauce, vegan mozzarella and fresh basil.",
+    },
+    {
+      id: 19,
+      name: "Funghi Tartufati",
+      price: "17€",
+      description: "Mixed mushrooms, truffle oil and vegan cream.",
+    },
+    {
+      id: 20,
+      name: "Mediterranea",
+      price: "16€",
+      description: "Olives, artichokes, roasted peppers and oregano.",
+    },
+    {
+      id: 21,
+      name: "Pesto Verde",
+      price: "17€",
+      description: "Vegan pesto, pine nuts, spinach and vegan cheese.",
+    },
+    {
+      id: 22,
+      name: "Ortolana",
+      price: "16€",
+      description: "Seasonal vegetables, tomato sauce and fresh herbs.",
     },
   ],
 

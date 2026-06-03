@@ -10,7 +10,7 @@ const CocktailsSection = () => {
     useGSAP(() => {
         const parallaxTimeline = gsap.timeline({
             scrollTrigger: {
-                trigger: '#cocktails',
+                trigger: '#menu',
                 start: 'top 30%',
                 end: 'bottom 80%',
                 scrub: true,
@@ -29,13 +29,28 @@ const CocktailsSection = () => {
 
     return (
 
-        <section id="cocktails">
+        <section id="menu">
 
             <MenuPair
                 leftTitle="Signature Cocktails"
                 leftItems={menuItems.cocktails}
                 rightTitle="Refreshing Mocktails"
                 rightItems={menuItems.mocktails}
+            />
+
+            <MenuPair
+                leftTitle="Meat Pizzas"
+                leftItems={menuItems.pizza}
+                rightTitle="Vegan Pizzas"
+                rightItems={menuItems.veganPizza}
+            />
+
+            <MenuPair
+                leftTitle="Meat Pasta"
+                leftItems={menuItems.pasta}
+                rightTitle="Vegan Pasta"
+                rightItems={menuItems.veganPasta}
+                id="last-menu-pair"
             />
 
 

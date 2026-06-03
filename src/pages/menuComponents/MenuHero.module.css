@@ -9,6 +9,7 @@
     border-transparent;
 }
 
+
 .title{
     @apply md:mt-32
     mt-40
@@ -18,6 +19,7 @@
     text-center
     font-modern-negra;
 }
+
 
 .body{
     @apply container

@@ -1,0 +1,100 @@
+@reference "../../index.css";
+
+
+.section {
+
+    @apply min-h-dvh
+    flex-center
+    relative
+    overflow-hidden
+    flex
+    items-center
+    justify-center
+    py-20;
+
+}
+
+.container {
+
+    @apply container
+    mx-auto
+    relative
+    h-full;
+
+}
+
+.container h2 {
+
+    @apply relative
+    text-center
+    text-[#505050]
+    font-modern-negra
+    leading-none
+    text-8xl
+    md:text-[18vw];
+
+}
+
+.imageWrapper {
+    @apply md:w-[60vw]
+    w-full
+    h-[50vh]
+    md:h-[70vh]
+    rounded-4xl
+    overflow-hidden
+    absolute
+    top-0
+    md:top-1/2
+    md:-translate-y-1/2
+    left-1/2
+    -translate-x-1/2;
+}
+
+.mealImage {
+    @apply w-full
+    h-full
+    object-cover;
+}
+
+.maskedContainer {
+
+    @apply absolute
+    inset-0
+    flex
+    items-center
+    justify-center;
+
+}
+
+.maskedContainer div {
+
+    @apply opacity-0
+    text-center
+    max-w-xl
+    space-y-5;
+
+}
+
+.maskedContainer h3 {
+
+    @apply text-4xl
+    md:text-6xl
+    font-modern-negra
+    text-yellow;
+
+}
+
+.maskedContainer p {
+
+    @apply text-lg;
+
+}
+
+.maskedContainer span {
+
+    @apply block
+    text-3xl
+    font-bold
+    text-white;
+
+}

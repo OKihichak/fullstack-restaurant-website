@@ -1,6 +1,7 @@
 import styles from "./MenuPair.module.css";
 
 const MenuPair = ({
+    
     leftTitle,
     leftItems,
     rightTitle,

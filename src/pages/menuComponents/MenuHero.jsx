@@ -42,13 +42,14 @@ const MenuHero = () => {
 
 
         const startValue = isMobile ? 'top 50%' : 'center 60%';
-        const endValue = isMobile ? '120% top' : 'bottom top';
+        
 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "video",
                 start: startValue,
-                end: endValue,
+                endTrigger: '#menu',
+                end: 'bottom bottom',
                 scrub: true,
                 pin: true,
             },
@@ -65,6 +66,8 @@ const MenuHero = () => {
     return (
         <>
             <section className={styles.hero}>
+
+                
 
                 <h1 className={`title ${styles.title}`}>
                     MENU
