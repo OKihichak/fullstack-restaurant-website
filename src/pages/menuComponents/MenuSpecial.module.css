@@ -57,13 +57,20 @@
 }
 
 .maskedContainer {
-
     @apply absolute
     inset-0
     flex
-    items-center
-    justify-center;
+    items-end
+    justify-center
+    pb-32;
 
+    @media (min-width: 768px) {
+        @apply pb-32;
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 0;
+    }
 }
 
 .maskedContainer div {
