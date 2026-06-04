@@ -60,8 +60,10 @@ body {
     mask-size: 50%;
 }
 
-@utility noisy {
-    background-image: url("images/background1.jpg");
-    background-size: cover;
-    background-position: center;
+@layer utilities {
+    .noisy {
+        background-image: url("/images/noise.png");
+        background-size: cover;
+        background-position: center;
+    }
 }

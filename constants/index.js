@@ -213,6 +213,7 @@ const menuItems = {
       name: "Negroni",
       price: "13€",
       description: "Gin, Campari, sweet vermouth.",
+      
     },
 
     {
@@ -220,6 +221,7 @@ const menuItems = {
       name: "Aperol Spritz",
       price: "11€",
       description: "Aperol, prosecco, soda water, orange.",
+      
     },
 
     {
@@ -227,6 +229,7 @@ const menuItems = {
       name: "Espresso Martini",
       price: "14€",
       description: "Vodka, coffee liqueur, fresh espresso.",
+      
     },
 
     {
@@ -234,6 +237,7 @@ const menuItems = {
       name: "Old Fashioned",
       price: "15€",
       description: "Bourbon, bitters, sugar, orange zest.",
+      
     },
 
     {
@@ -241,6 +245,7 @@ const menuItems = {
       name: "Amalfi Sunset",
       price: "16€",
       description: "Gin, limoncello, grapefruit, rosemary.",
+      
     },
 
     {
@@ -248,6 +253,7 @@ const menuItems = {
       name: "Pier Signature",
       price: "17€",
       description: "Vodka, passionfruit, basil syrup, citrus.",
+      
     },
 
     {
@@ -255,6 +261,7 @@ const menuItems = {
       name: "Bellini",
       price: "12€",
       description: "Prosecco, white peach purée.",
+      
     },
 
     {
@@ -262,6 +269,7 @@ const menuItems = {
       name: "Smoked Manhattan",
       price: "18€",
       description: "Rye whiskey, vermouth, bitters, smoked aroma.",
+      
     },
   ],
   mocktails: [
@@ -270,6 +278,7 @@ const menuItems = {
       name: "Virgin Mojito",
       price: "9€",
       description: "Fresh mint, lime juice, soda water, cane sugar.",
+      
     },
 
     {
@@ -277,6 +286,7 @@ const menuItems = {
       name: "Berry Fizz",
       price: "10€",
       description: "Mixed berries, lemon juice, sparkling water.",
+      
     },
 
     {
@@ -323,6 +333,72 @@ const menuItems = {
   ],
 };
 
+const cocktailSliderItems = [
+  {
+    name: "Negroni",
+    path: "/images/cocktails/negroni.png",
+    title: "The Bold Italian Icon",
+    description:
+      "A timeless blend of gin, Campari and sweet vermouth. Bitter, complex and perfectly balanced for slow sipping.",
+  },
+
+  {
+    name: "Aperol Spritz",
+    path: "/images/cocktails/aperol-spritz.png",
+    title: "Sunshine in Every Sip",
+    description:
+      "Bright, bubbly and effortlessly refreshing. Italy's favorite aperitivo made for warm evenings and good company.",
+  },
+
+  {
+    name: "Espresso Martini",
+    path: "/images/cocktails/espresso-martini.png",
+    title: "Where Coffee Meets Cocktail",
+    description:
+      "Rich espresso and smooth vodka come together in a sophisticated drink that energizes and indulges at once.",
+  },
+
+  {
+    name: "Old Fashioned",
+    path: "/images/cocktails/old-fashioned.png",
+    title: "A Gentleman’s Classic",
+    description:
+      "Simple yet refined. Bourbon, bitters and sugar create one of the most celebrated cocktails of all time.",
+  },
+
+  {
+    name: "Amalfi Sunset",
+    path: "/images/cocktails/amalfi-sunset.png",
+    title: "Inspired by the Italian Coast",
+    description:
+      "Limoncello, grapefruit and rosemary capture the colors and aromas of a Mediterranean sunset.",
+  },
+
+  {
+    name: "Pier Signature",
+    path: "/images/cocktails/pier-signature.png",
+    title: "Crafted for the House",
+    description:
+      "A vibrant fusion of passionfruit, basil and citrus. Fresh, elegant and uniquely ours.",
+  },
+
+  {
+    name: "Bellini",
+    path: "/images/cocktails/bellini.png",
+    title: "Venetian Elegance",
+    description:
+      "Delicate white peach and sparkling prosecco create a light and celebratory Italian favorite.",
+  },
+
+  {
+    name: "Smoked Manhattan",
+    path: "/images/cocktails/berry-fizz.png",
+    title: "Smoke, Spice & Sophistication",
+    description:
+      "Rye whiskey and vermouth elevated with aromatic smoke for a memorable and dramatic finish.",
+  },
+];
+
 const restaurantIcon = new L.Icon({
   iconUrl: "/images/logo.png",
 
@@ -333,4 +409,4 @@ const restaurantIcon = new L.Icon({
   popupAnchor: [0, -70],
 });
 
-export { navLinks, restaurantIcon, menuItems };
+export { navLinks, restaurantIcon, menuItems, cocktailSliderItems };

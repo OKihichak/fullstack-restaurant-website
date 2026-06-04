@@ -65,7 +65,7 @@ const MenuHero = () => {
 
     return (
         <>
-            <section className={styles.hero}>
+            <section className={`noisy ${styles.hero}`}>
 
                 
 

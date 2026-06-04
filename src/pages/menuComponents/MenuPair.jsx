@@ -6,6 +6,7 @@ const MenuPair = ({
     leftItems,
     rightTitle,
     rightItems,
+    
 }) => {
 
     return (

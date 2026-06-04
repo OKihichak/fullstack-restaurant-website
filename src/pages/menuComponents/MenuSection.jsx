@@ -29,7 +29,7 @@ const CocktailsSection = () => {
 
     return (
 
-        <section id="menu">
+        <section id="menu" >
 
             <MenuPair
                 leftTitle="Signature Cocktails"

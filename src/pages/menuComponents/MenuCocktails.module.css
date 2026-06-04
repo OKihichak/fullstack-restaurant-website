@@ -1,0 +1,91 @@
+@reference "../../index.css";
+
+
+
+.menuCocktails {
+    @apply relative
+    w-full
+    md:mt-40
+    mt-0
+    2xl:px-0
+    px-5
+    py-20
+    radial-gradient;
+}
+
+.content {
+    @apply flex
+    flex-col
+    justify-between
+    items-center
+    container
+    mx-auto
+    relative;
+}
+
+.arrows {
+    @apply flex
+    items-center
+    justify-between
+    w-full
+    absolute;
+}
+
+.cocktail {
+    @apply flex-center
+    mt-10;
+}
+
+.recipe {
+    @apply flex
+    max-md:flex-col
+    gap-10
+    md:items-center
+    justify-between
+    w-full
+    lg:absolute
+    bottom-0;
+}
+
+.info {
+    @apply space-y-4
+    lg:translate-y-20;
+}
+
+.details {
+    @apply space-y-5
+    md:max-w-md
+    text-left;
+}
+
+.arrows button {
+    @apply text-white
+    hover:text-yellow
+    cursor-pointer
+    transition-colors
+    max-w-36;
+}
+
+.arrows button span {
+    @apply text-3xl
+    font-modern-negra
+    leading-none
+    hidden
+    md:block;
+}
+
+
+
+.imageWrapper {
+    @apply w-[500px]
+    h-[500px]
+    flex
+    items-center
+    justify-center;
+}
+
+.imageWrapper img {
+    @apply w-full
+    h-full
+    object-contain;
+}

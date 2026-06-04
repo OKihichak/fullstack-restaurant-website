@@ -1,3 +1,4 @@
+import MenuCocktails from "./menuComponents/MenuCocktails"
 import MenuHero from "./menuComponents/MenuHero"
 import MenuSection from "./menuComponents/MenuSection"
 import MenuSpecial from "./menuComponents/MenuSpecial"
@@ -11,6 +12,7 @@ const MenuPage = () => {
             <MenuHero />
             <MenuSection />
             <MenuSpecial />
+            <MenuCocktails />
         </>
 
     )
