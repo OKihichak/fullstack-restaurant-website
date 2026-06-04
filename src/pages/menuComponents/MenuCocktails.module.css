@@ -58,22 +58,26 @@
     text-left;
 }
 
-.arrows button {
+button {
     @apply text-white
     hover:text-yellow
     cursor-pointer
     transition-colors
-    max-w-36;
+    max-w-36
+    flex
+    flex-col;
 }
 
-.arrows button span {
+button span {
     @apply text-3xl
     font-modern-negra
     leading-none
     hidden
     md:block;
-}
 
+    width: 30px;
+    height: 80px;
+}
 
 
 .imageWrapper {
@@ -88,4 +92,35 @@
     @apply w-full
     h-full
     object-contain;
+}
+
+
+.info {
+    @apply space-y-4
+    lg:translate-y-20;
+}
+
+.title {
+    @apply font-modern-negra
+    md:text-6xl
+    text-3xl
+    text-yellow
+    max-w-40;
+}
+
+.details {
+    @apply space-y-5
+    md:max-w-md
+    text-left;
+}
+
+.details h2 {
+    @apply md:text-5xl
+    text-3xl
+    font-serif;
+}
+
+.details p {
+    @apply md:text-lg
+    pe-5;
 }

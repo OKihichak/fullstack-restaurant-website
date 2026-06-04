@@ -74,6 +74,7 @@ const MenuCocktails = () => {
             <div className={styles.content}>
 
                 <div className={styles.arrows}>
+
                     <button
                         className={styles.arrowLeft}
                         onClick={() => goToSlide(currentIndex - 1)}
@@ -115,7 +116,7 @@ const MenuCocktails = () => {
                     <div className={styles.info}>
                         <p>Cocktail</p>
 
-                        <p id="title">
+                        <p className={styles.title}>
                             {currentCocktail.name}
                         </p>
                     </div>
