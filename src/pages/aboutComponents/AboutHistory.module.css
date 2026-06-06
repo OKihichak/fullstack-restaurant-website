@@ -3,7 +3,7 @@
 .history {
     @apply container
     mx-auto
-    py-32
+    py-16
     px-5;
 }
 

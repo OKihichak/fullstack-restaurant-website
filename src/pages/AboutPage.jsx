@@ -1,3 +1,4 @@
+import AboutChef from "./aboutComponents/AboutChef"
 import AboutHero from "./aboutComponents/aboutHero"
 import AboutHistory from "./aboutComponents/AboutHistory"
 
@@ -8,7 +9,8 @@ const AboutPage = () => {
   return (
     <>
       <AboutHero  />
-      <AboutHistory />   
+      <AboutChef />  
+      <AboutHistory />
     </>
   )
 }

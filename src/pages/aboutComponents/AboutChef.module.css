@@ -1,0 +1,54 @@
+
+@reference "../../index.css";
+
+.chef {
+    @apply py-16
+    px-5;
+}
+
+.container {
+    @apply container
+    mx-auto
+    grid
+    lg:grid-cols-2
+    gap-16
+    items-center;
+}
+
+.imageWrapper {
+    @apply relative
+    overflow-hidden
+    rounded-4xl;
+}
+
+.imageWrapper img {
+    @apply w-full
+    h-[700px]
+    object-cover;
+}
+
+.content {
+    @apply space-y-8;
+}
+
+.content span {
+    @apply uppercase
+    tracking-[0.3em]
+    text-yellow
+    text-sm;
+}
+
+.content h2 {
+    @apply font-modern-negra
+    text-yellow
+    text-5xl
+    md:text-7xl
+    leading-none;
+}
+
+.content p {
+    @apply text-lg
+    text-white/80
+    leading-relaxed;
+}
+
