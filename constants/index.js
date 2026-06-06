@@ -16,7 +16,7 @@ const navLinks = [
   {
     id: 3,
     title: "About Us",
-    path: "/#about",
+    path: "/about-us",
   },
 
   {
@@ -399,6 +399,60 @@ const cocktailSliderItems = [
   },
 ];
 
+const restaurantHistory = [
+    {
+        year: "2018",
+        title: "The Idea Was Born",
+        description:
+            "Inspired by traditional Italian cuisine and the warmth of family gatherings, the vision for PIER began with a simple goal: bringing authentic flavours to the local community.",
+        image: "/images/aboutHistory1.jpg",
+    },
+
+    {
+        year: "2019",
+        title: "Official Opening",
+        description:
+            "PIER opened its doors for the first time, serving handcrafted pizzas, fresh pasta and a carefully curated selection of Italian wines.",
+        image: "/images/aboutHistory2.jpg",
+    },
+
+    {
+        year: "2020",
+        title: "Building a Family",
+        description:
+            "Despite challenging times, our team grew stronger and developed a reputation for exceptional hospitality and unforgettable dining experiences.",
+        image: "/images/aboutHistory3.jpg",
+    },
+
+    {
+        year: "2021",
+        title: "The Cocktail Program",
+        description:
+            "Signature cocktails were introduced, combining classic recipes with modern creativity and becoming a guest favourite.",
+        image: "/images/aboutHistory4.jpg",
+    },
+
+    {
+        year: "2023",
+        title: "Chef's Signature Menu",
+        description:
+            "New seasonal dishes and chef's specials brought fresh inspiration while staying true to our Italian roots.",
+        image: "/images/aboutHistory5.jpg",
+    },
+
+    {
+        year: "2025",
+        title: "Thousands of Guests Served",
+        description:
+            "What started as a dream became a beloved destination for locals, families and visitors seeking authentic Italian dining.",
+        image: "/images/aboutHistory6.jpg",
+    },
+];
+
+
+
+
+
 const restaurantIcon = new L.Icon({
   iconUrl: "/images/logo.png",
 
@@ -409,4 +463,4 @@ const restaurantIcon = new L.Icon({
   popupAnchor: [0, -70],
 });
 
-export { navLinks, restaurantIcon, menuItems, cocktailSliderItems };
+export { navLinks, restaurantIcon, menuItems, cocktailSliderItems, restaurantHistory };

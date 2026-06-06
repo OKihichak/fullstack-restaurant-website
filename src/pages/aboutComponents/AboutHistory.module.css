@@ -1,0 +1,148 @@
+@reference "../../index.css";
+
+.history {
+    @apply container
+    mx-auto
+    py-32
+    px-5;
+}
+
+.history h2 {
+    @apply text-5xl
+    font-modern-negra
+    text-yellow
+    mb-16;
+}
+
+.grid {
+    @apply grid
+    lg:grid-cols-[2fr_1fr]
+    gap-16;
+}
+
+/* LEFT */
+
+.featured {
+    @apply space-y-6;
+}
+
+.mainCard {
+    @apply relative
+    h-[500px]
+    rounded-3xl
+    overflow-hidden;
+}
+
+.mainCard img {
+    @apply w-full
+    h-full
+    object-cover;
+}
+
+.smallCards {
+    @apply grid
+    md:grid-cols-2
+    gap-6;
+}
+
+.smallCard {
+    @apply relative
+    h-[280px]
+    rounded-3xl
+    overflow-hidden;
+}
+
+.smallCard img {
+    @apply w-full
+    h-full
+    object-cover;
+}
+
+/* overlays */
+
+.overlay {
+    @apply absolute
+    inset-0
+    flex
+    flex-col
+    justify-end
+    p-8;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        transparent
+    );
+}
+
+.overlay span {
+    @apply uppercase
+    tracking-[0.25em]
+    text-sm
+    text-white/70
+    mb-2;
+}
+
+.overlay h3 {
+    @apply text-4xl
+    font-serif
+    text-white;
+}
+
+/* RIGHT */
+
+.timeline {
+    @apply relative
+    pl-10.5;
+}
+
+.line {
+    @apply absolute
+    left-3
+    top-0
+    w-px;
+
+    height: 0%;
+    background: rgba(212, 191, 125, 0.8);
+}
+
+.timelineItem {
+    @apply relative
+    pb-16;
+}
+
+.dot {
+    @apply absolute
+    w-4
+    h-4
+    rounded-full
+    bg-yellow
+    left-[-37px]
+    top-5;
+}
+
+.content span {
+    @apply text-yellow
+    text-5xl
+    block
+    mb-4;
+}
+
+.content h3 {
+    @apply text-2xl
+    font-serif
+    mb-4;
+}
+
+.content img {
+    @apply w-full
+    h-48
+    object-cover
+    rounded-2xl
+    mb-4;
+}
+
+.content p {
+    @apply text-white/70
+    leading-relaxed;
+}
