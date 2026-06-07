@@ -22,7 +22,7 @@ const navLinks = [
   {
     id: 4,
     title: "Contact",
-    path: "/#contact",
+    path: "/contact",
   },
 ];
 

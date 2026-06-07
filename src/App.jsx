@@ -6,6 +6,7 @@ import MainFooter from "./components/MainFooter";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
 
@@ -30,6 +31,11 @@ const App = () => {
                 <Route
                     path="/about-us"
                     element={<AboutPage />}
+                />
+
+                <Route
+                    path="/contact"
+                    element={<ContactPage />}
                 />
 
             </Routes>

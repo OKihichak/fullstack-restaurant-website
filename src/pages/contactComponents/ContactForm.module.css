@@ -1,0 +1,105 @@
+@reference "../../index.css";
+
+.contact {
+    @apply container
+    mx-auto
+    py-32
+    px-5
+    grid
+    lg:grid-cols-2
+    gap-16
+    items-start;
+}
+
+.info {
+    @apply space-y-8;
+}
+
+.info span {
+    @apply text-yellow
+    tracking-[0.3em]
+    text-sm;
+}
+
+.info h2 {
+    @apply font-modern-negra
+    text-yellow
+    text-5xl
+    md:text-7xl
+    leading-none;
+}
+
+.info > p {
+    @apply text-lg
+    text-white/70
+    max-w-md;
+}
+
+.details {
+    @apply space-y-8;
+}
+
+.details h3 {
+    @apply text-2xl
+    font-semibold
+    mb-2;
+}
+
+.details p {
+    @apply text-white/70;
+}
+
+.form {
+    @apply border
+    border-white/10
+    rounded-3xl
+    p-8
+    flex
+    flex-col
+    gap-5;
+}
+
+.form h3 {
+    @apply text-4xl
+    font-modern-negra
+    text-yellow
+    mb-2;
+}
+
+.form input,
+.form textarea {
+    @apply w-full
+    bg-transparent
+    border
+    border-white/10
+    rounded-xl
+    px-5
+    py-4
+    outline-none
+    text-white;
+}
+
+.form input:focus,
+.form textarea:focus {
+    @apply border-yellow;
+}
+
+.form textarea {
+    @apply h-52
+    resize-none;
+}
+
+.form button {
+    @apply bg-yellow
+    text-black
+    font-semibold
+    px-8
+    py-4
+    rounded-xl
+    self-start
+    transition;
+}
+
+.form button:hover {
+    @apply opacity-90;
+}
