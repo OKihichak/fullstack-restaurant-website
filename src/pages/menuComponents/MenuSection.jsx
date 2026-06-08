@@ -1,11 +1,34 @@
-import { menuItems } from "../../../constants";
 import MenuPair from "./MenuPair";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
-
+import { useEffect, useState } from "react";
+import { getMenuItems } from "../../services/menuService";
 
 const CocktailsSection = () => {
+
+    const [menuItems, setMenuItems] = useState([]);
+
+    useEffect(() => {
+        const fetchMenu = async () => {
+            try {
+                const data = await getMenuItems();
+                setMenuItems(data);
+            }
+            catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchMenu();
+    }, []);
+
+    const pizza = menuItems.filter(
+        item => item.category === "pizza"
+    );
+
+    const veganPizza = menuItems.filter(
+        item => item.category === "veganPizza"
+    );
 
     useGSAP(() => {
         const parallaxTimeline = gsap.timeline({
@@ -21,38 +44,22 @@ const CocktailsSection = () => {
             x: -100,
             y: 100
         })
-        .from('#c-right-leaf', {
-            x:100,
-            y: 100
-        })
-    },[])
+            .from('#c-right-leaf', {
+                x: 100,
+                y: 100
+            })
+    }, [])
 
     return (
 
-        <section id="menu" >
-
-            <MenuPair
-                leftTitle="Signature Cocktails"
-                leftItems={menuItems.cocktails}
-                rightTitle="Refreshing Mocktails"
-                rightItems={menuItems.mocktails}
-            />
+        <section id="menu">
 
             <MenuPair
                 leftTitle="Meat Pizzas"
-                leftItems={menuItems.pizza}
+                leftItems={pizza}
                 rightTitle="Vegan Pizzas"
-                rightItems={menuItems.veganPizza}
+                rightItems={veganPizza}
             />
-
-            <MenuPair
-                leftTitle="Meat Pasta"
-                leftItems={menuItems.pasta}
-                rightTitle="Vegan Pasta"
-                rightItems={menuItems.veganPasta}
-                id="last-menu-pair"
-            />
-
 
         </section>
 

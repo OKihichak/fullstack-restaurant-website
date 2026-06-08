@@ -1,6 +1,4 @@
-from sqlalchemy import Column
-from sqlalchemy import Integer
-from sqlalchemy import String
+from sqlalchemy import Column, Integer, String, Float, Text, Boolean
 
 from app.core.database import Base
 
@@ -8,12 +6,22 @@ from app.core.database import Base
 class MenuItem(Base):
     __tablename__ = "menu_items"
 
-    id = Column(Integer, primary_key=True, index=True)
-
-    category = Column(String, nullable=False)
+    id = Column(Integer, primary_key=True)
 
     name = Column(String, nullable=False)
 
-    price = Column(Integer, nullable=False)
+    title = Column(String)
 
-    description = Column(String, nullable=False)
+    ingredients = Column(Text, nullable=False)
+
+    description = Column(Text)
+
+    price = Column(Float, nullable=False)
+
+    category = Column(String, nullable=False)
+
+    image_url = Column(String)
+
+    featured = Column(Boolean, default=False)
+
+    display_order = Column(Integer, default=0)

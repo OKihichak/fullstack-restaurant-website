@@ -25,10 +25,10 @@ const MenuPair = ({
 
                             <div className={styles.info}>
                                 <h3>{item.name}</h3>
-                                <p>{item.description}</p>
+                                <p>{item.ingredients}</p>
                             </div>
 
-                            <span>{item.price}</span>
+                            <span>{item.price}$</span>
 
                         </li>
 
@@ -50,10 +50,10 @@ const MenuPair = ({
 
                             <div className={styles.info}>
                                 <h3>{item.name}</h3>
-                                <p>{item.description}</p>
+                                <p>{item.ingredients}</p>
                             </div>
 
-                            <span>{item.price}</span>
+                            <span>{item.price}$</span>
 
                         </li>
 
