@@ -16,7 +16,7 @@ class MenuItemBase(BaseModel):
     image_url: str | None = None
 
     featured: bool = False
-    display_order: int = 0
+    
 
 
 class MenuItemCreate(MenuItemBase):
@@ -36,7 +36,7 @@ class MenuItemUpdate(BaseModel):
     image_url: str | None = None
 
     featured: bool | None = None
-    display_order: int | None = None
+    
 
 
 class MenuItemResponse(MenuItemBase):

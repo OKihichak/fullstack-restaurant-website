@@ -23,5 +23,7 @@ class MenuItem(Base):
     image_url = Column(String)
 
     featured = Column(Boolean, default=False)
+    
+    
 
-    display_order = Column(Integer, default=0)
+    

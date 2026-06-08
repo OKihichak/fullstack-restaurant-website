@@ -1,6 +1,4 @@
 import MenuPair from "./MenuPair";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { useEffect, useState } from "react";
 import { getMenuItems } from "../../services/menuService";
 
@@ -30,25 +28,23 @@ const CocktailsSection = () => {
         item => item.category === "veganPizza"
     );
 
-    useGSAP(() => {
-        const parallaxTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#menu',
-                start: 'top 30%',
-                end: 'bottom 80%',
-                scrub: true,
-            }
-        })
+    const pasta = menuItems.filter(
+        item => item.category === "pasta"
+    );
 
-        parallaxTimeline.from('#c-left-leaf', {
-            x: -100,
-            y: 100
-        })
-            .from('#c-right-leaf', {
-                x: 100,
-                y: 100
-            })
-    }, [])
+    const veganPasta = menuItems.filter(
+        item => item.category === "veganPasta"
+    );
+
+    const cocktail = menuItems.filter(
+        item => item.category === "cocktail"
+    );
+
+    const mocktail = menuItems.filter(
+        item => item.category === "mocktail"
+    );
+
+    
 
     return (
 
@@ -59,6 +55,20 @@ const CocktailsSection = () => {
                 leftItems={pizza}
                 rightTitle="Vegan Pizzas"
                 rightItems={veganPizza}
+            />
+
+            <MenuPair
+                leftTitle="Meat Pasta"
+                leftItems={pasta}
+                rightTitle="Vegan Pasta"
+                rightItems={veganPasta}
+            />
+
+            <MenuPair
+                leftTitle="Cocktails"
+                leftItems={cocktail}
+                rightTitle="Mocktails"
+                rightItems={mocktail}
             />
 
         </section>

@@ -1,16 +1,31 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useState } from "react";
-import { cocktailSliderItems } from "../../../constants";
+import { useState, useEffect } from "react";
+import { getFeaturedCocktails } from "../../services/menuService";
+// import { cocktailSliderItems } from "../../../constants";
 import styles from "./MenuCocktails.module.css";
 
 
 const MenuCocktails = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [cocktails, setCocktails] = useState([]);
 
-    const cocktails = cocktailSliderItems;
+    useEffect(() => {
+        const loadCocktails = async () => {
+            try {
+                const data = await getFeaturedCocktails();
+                setCocktails(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        loadCocktails();
+    }, []);
 
     const totalCocktails = cocktails.length;
+
+
 
     const goToSlide = (index) => {
         const newIndex = (index + totalCocktails) % totalCocktails;
@@ -28,6 +43,9 @@ const MenuCocktails = () => {
     const nextCocktail = getCocktailAt(1);
 
     useGSAP(() => {
+
+        if (!cocktails.length) return;
+
         gsap.fromTo(
             ".cocktail img",
             {
@@ -67,7 +85,12 @@ const MenuCocktails = () => {
                 duration: 1,
             }
         );
-    }, [currentIndex]);
+
+    }, [currentIndex, cocktails]);
+
+    if (!cocktails.length) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <section id="menu-cocktails" className={styles.menuCocktails}>
@@ -83,7 +106,7 @@ const MenuCocktails = () => {
 
                         <img
                             src="/images/right-arrow.png"
-                            alt=""
+                            alt="right arrow"
                             aria-hidden="true"
                         />
                     </button>
@@ -96,7 +119,7 @@ const MenuCocktails = () => {
 
                         <img
                             src="/images/left-arrow.png"
-                            alt=""
+                            alt="left arrow"
                             aria-hidden="true"
                         />
                     </button>
@@ -105,7 +128,7 @@ const MenuCocktails = () => {
                 <div className={`cocktail ${styles.cocktail}`}>
                     <div className={styles.imageWrapper}>
                         <img
-                            src={currentCocktail.path}
+                            src={currentCocktail.image_url}
                             alt={currentCocktail.name}
                         />
                     </div>
@@ -122,11 +145,11 @@ const MenuCocktails = () => {
                     </div>
 
                     <div className={`details ${styles.details}`}>
-                        <h2>
+                        <h2 >
                             {currentCocktail.title}
                         </h2>
 
-                        <p>
+                        <p >
                             {currentCocktail.description}
                         </p>
                     </div>

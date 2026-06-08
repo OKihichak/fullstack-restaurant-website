@@ -2,14 +2,34 @@ import styles from "./MenuSpecial.module.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
-
+import { useState, useEffect } from "react";
+import { getSpecialItem } from "../../services/menuService";
 
 
 const MenuSpecial = () => {
 
+    const [specialItem, setSpecialItem] = useState(null);
+
+
+
     const isMobile = useMediaQuery({
         maxWidth: 767
     });
+
+    useEffect(() => {
+        const loadSpecial = async () => {
+            try {
+                const data = await getSpecialItem();
+                setSpecialItem(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        loadSpecial();
+    }, []);
+
+
 
     useGSAP(() => {
 
@@ -53,6 +73,10 @@ const MenuSpecial = () => {
 
     }, []);
 
+    
+
+
+
     return (
 
         <section
@@ -69,8 +93,8 @@ const MenuSpecial = () => {
                 <div className={styles.imageWrapper}>
 
                     <img
-                        src="/images/special-meal.jpg"
-                        alt="Special meal"
+                        src={specialItem?.image_url}
+                        alt={specialItem?.name}
                         className={`masked-img ${styles.mealImage}`}
                     />
 
@@ -81,15 +105,14 @@ const MenuSpecial = () => {
                     <div id="masked-content">
 
                         <h3>
-                            Truffle Burrata Pizza
+                            {specialItem?.name}
                         </h3>
 
                         <p>
-                            Fresh burrata, black truffle cream,
-                            parmesan and basil oil.
+                            {specialItem?.ingredients}
                         </p>
 
-                        <span>24€</span>
+                        <span>{specialItem?.price}€</span>
 
                     </div>
 
