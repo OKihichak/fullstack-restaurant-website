@@ -9,29 +9,3 @@ export const getMenuItems = async () => {
 
     return response.json();
 };
-
-
-export const getFeaturedCocktails = async () => {
-    const response = await fetch(
-        "http://127.0.0.1:8000/menu/featured-cocktails"
-    );
-
-    if (!response.ok) {
-        throw new Error("Failed to fetch cocktails");
-    }
-
-    return response.json();
-};
-
-
-export const getSpecialItem = async () => {
-    const response = await fetch(
-        "http://127.0.0.1:8000/menu/special"
-    );
-
-    if (!response.ok) {
-        throw new Error("Failed to fetch special item");
-    }
-
-    return response.json();
-};

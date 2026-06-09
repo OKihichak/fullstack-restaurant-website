@@ -2,13 +2,17 @@ import styles from "./MenuSpecial.module.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
-import { useState, useEffect } from "react";
-import { getSpecialItem } from "../../services/menuService";
+import { useMenu } from "../../hooks/useMenu";
 
 
 const MenuSpecial = () => {
 
-    const [specialItem, setSpecialItem] = useState(null);
+
+    const {
+        specialItem,
+        isLoading,
+        error
+    } = useMenu();
 
 
 
@@ -16,29 +20,18 @@ const MenuSpecial = () => {
         maxWidth: 767
     });
 
-    useEffect(() => {
-        const loadSpecial = async () => {
-            try {
-                const data = await getSpecialItem();
-                setSpecialItem(data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        loadSpecial();
-    }, []);
 
 
 
     useGSAP(() => {
+
+        if (!specialItem) return;
 
         const start = isMobile
             ? "top 20%"
             : "top top";
 
         const tl = gsap.timeline({
-
             scrollTrigger: {
                 trigger: "#special-meal",
                 start,
@@ -46,17 +39,14 @@ const MenuSpecial = () => {
                 scrub: 1.5,
                 pin: true
             }
-
         });
 
         tl
-
             .to(".will-fade", {
                 opacity: 0,
                 stagger: 0.2,
                 ease: "power1.inOut"
             })
-
             .to(".masked-img", {
                 scale: 1.3,
                 maskPosition: "center",
@@ -64,16 +54,23 @@ const MenuSpecial = () => {
                 duration: 1,
                 ease: "power1.inOut"
             })
-
             .to("#masked-content", {
                 opacity: 1,
                 duration: 1,
                 ease: "power1.inOut"
             });
 
-    }, []);
+    }, [specialItem, isMobile]);
 
-    
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Failed to load special item.</div>;
+    }
+
+
 
 
 

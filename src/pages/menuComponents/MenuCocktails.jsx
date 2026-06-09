@@ -1,29 +1,25 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useState, useEffect } from "react";
-import { getFeaturedCocktails } from "../../services/menuService";
-// import { cocktailSliderItems } from "../../../constants";
+import { useState } from "react";
 import styles from "./MenuCocktails.module.css";
+import { useMenu } from "../../hooks/useMenu";
 
 
 const MenuCocktails = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [cocktails, setCocktails] = useState([]);
 
-    useEffect(() => {
-        const loadCocktails = async () => {
-            try {
-                const data = await getFeaturedCocktails();
-                setCocktails(data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
+    const {
+        featuredCocktails,
+        isLoading,
+        error
+    } = useMenu();
 
-        loadCocktails();
-    }, []);
+    const cocktails = featuredCocktails;
+
+
 
     const totalCocktails = cocktails.length;
+
 
 
 
@@ -87,6 +83,14 @@ const MenuCocktails = () => {
         );
 
     }, [currentIndex, cocktails]);
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Failed to load cocktails.</div>;
+    }
 
     if (!cocktails.length) {
         return <div>Loading...</div>;

@@ -1,53 +1,29 @@
 import MenuPair from "./MenuPair";
-import { useEffect, useState } from "react";
-import { getMenuItems } from "../../services/menuService";
+import { useMenu } from "../../hooks/useMenu";
+
 
 const CocktailsSection = () => {
 
-    const [menuItems, setMenuItems] = useState([]);
+    const {
+        pizza,
+        veganPizza,
+        pasta,
+        veganPasta,
+        cocktails,
+        mocktails,
+        isLoading,
+        error
+    } = useMenu();
 
-    useEffect(() => {
-        const fetchMenu = async () => {
-            try {
-                const data = await getMenuItems();
-                setMenuItems(data);
-            }
-            catch (error) {
-                console.error(error);
-            }
-        };
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
-        fetchMenu();
-    }, []);
-
-    const pizza = menuItems.filter(
-        item => item.category === "pizza"
-    );
-
-    const veganPizza = menuItems.filter(
-        item => item.category === "veganPizza"
-    );
-
-    const pasta = menuItems.filter(
-        item => item.category === "pasta"
-    );
-
-    const veganPasta = menuItems.filter(
-        item => item.category === "veganPasta"
-    );
-
-    const cocktail = menuItems.filter(
-        item => item.category === "cocktail"
-    );
-
-    const mocktail = menuItems.filter(
-        item => item.category === "mocktail"
-    );
-
-    
+    if (error) {
+        return <div>Failed to load menu.</div>;
+    }
 
     return (
-
         <section id="menu">
 
             <MenuPair
@@ -66,15 +42,13 @@ const CocktailsSection = () => {
 
             <MenuPair
                 leftTitle="Cocktails"
-                leftItems={cocktail}
+                leftItems={cocktails}
                 rightTitle="Mocktails"
-                rightItems={mocktail}
+                rightItems={mocktails}
             />
 
         </section>
-
     );
-
 };
 
 export default CocktailsSection;
